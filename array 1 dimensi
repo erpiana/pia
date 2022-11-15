@@ -1,0 +1,59 @@
+/*
+    file : data anak kost malati
+    programmer : Erpiana
+    Nim : 22343004
+*/
+
+#include <iostream>
+#include <string>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int n;
+	string nama[15],status[10];
+	int jumBayar[350];
+
+	cout<<"========================"<<endl;
+	cout<<"Nama : Erpiana"<<endl;
+	cout<<"Nim  : 22343004"<<endl;
+	cout<<"========================"<<endl;
+
+	cout<<"Masukan Jumlah anak kost = ";
+	cin>>n;
+	cout<<endl;
+
+	for (int i=0; i<n; i++) {
+		cout<<endl;
+
+		cout<<"Anak ke-"<<i+1<<endl;
+		cout<<"Masukan Nama = ";
+		cin>>nama[i];
+		cout<<"Masukan jumlah uang yang telah diBayar = ";
+		cin>>jumBayar[i];
+
+		if (jumBayar[i]==350) {
+			status[i]="Lunas";
+		}
+		else if (jumBayar[i]<=350) {
+		 	status[i]="blum lunas";
+		}
+		else if (jumBayar[i]>=350) {
+		 	status[i]="uang yang dibayar berlebih";
+		}
+	}
+	cout<<endl;
+	cout<<"\tDAFTAR PEMBAYARAN KOST"<<endl;
+	cout<<"-------------------------------------------------------"<<endl;
+	cout<<"No    Nama           jumBayar           Status         "<<endl;
+	cout<<"-------------------------------------------------------"<<endl;
+
+	for (int i=0; i<n;i++) {
+	cout<<i+1<<"   "<<nama[i]<<"            "<<jumBayar[i]<<"          "<<status[i]<<endl;
+	cout<<"-------------------------------------------"<<endl;
+	}
+
+getch();
+}
