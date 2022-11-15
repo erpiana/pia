@@ -1,0 +1,52 @@
+/*
+    data penjualan laptop
+    Nama : Erpiana
+    Nim  : 22343004
+*/
+
+
+#include <iostream>
+#include <stdlib.h>
+#include <iomanip>
+
+using namespace std;
+
+int main (){
+
+    int data_laptop[3][2];
+    int i, j, total;
+    system("cls");
+
+    total=0;
+
+    cout<<"========================"<<endl;
+	cout<<"Nama : Erpiana"<<endl;
+	cout<<"Nim  : 22343004"<<endl;
+	cout<<"========================"<<endl<<endl;
+
+
+    cout<<"masukkan jumlah penjualan laptop pada baris ke-1= ";cin>>data_laptop[0][0];
+    cout<<"masukkan jumlah penjualan laptop pada baris ke-1= ";cin>>data_laptop[0][1];
+    cout<<"masukkan jumlah penjualan laptop pada baris ke-1= ";cin>>data_laptop[1][0];
+    cout<<"masukkan jumlah penjualan laptop pada baris ke-1= ";cin>>data_laptop[1][1];
+    cout<<"masukkan jumlah penjualan laptop pada baris ke-1= ";cin>>data_laptop[2][0];
+    cout<<"masukkan jumlah penjualan laptop pada baris ke-1= ";cin>>data_laptop[2][1];
+
+
+    //Menampilkan data penjualan laptop
+    cout<<"Tampil Data penjualan laptop "<<endl;cout<<endl;
+    cout<<"         asus    accer "<<endl;
+
+        for (i=0; i<=2; i++){
+            cout<<"Th ke- "<<i+1;
+
+            for (j=0; j<=1; j++){
+                cout<<setw(5)<<data_laptop[i][j];
+                total=total+data_laptop[i][j];
+            }
+            cout<<endl;
+    }cout<<endl;
+    cout<<"Jumlah laptop yang terjual    = "<<total<<endl;
+    cout<<"Rata-rata penjualan = "<<total/(i*j)<<endl;
+
+}
